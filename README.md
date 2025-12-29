@@ -12,21 +12,22 @@
   <tr>
     <td width="50%" valign="top" align="left">
       <h3>👨‍💻 关于我</h3>
-
-- 🔭 一名热爱编程的 **CRUD boy**
-- 🌱 Java 菜鸟，Rust 日常入门学者
-- 🛠️ 擅长雕花
-- 💡 热衷于探索新技术与构建有趣的项目
-- 📚 持续学习，乐于分享技术心得
-- 🎯 写出优雅、高效、可维护的代码
-
-      </td>
+      <ul>
+        <li>🔭 一名热爱编程的 <b>CRUD boy</b></li>
+        <li>🌱 Java 菜鸟，Rust 日常入门学者</li>
+        <li>🛠️ 擅长雕花</li>
+        <li>💡 热衷于探索新技术与构建有趣的项目</li>
+        <li>📚 持续学习，乐于分享技术心得</li>
+        <li>🎯 写出优雅、高效、可维护的代码</li>
+      </ul>
+    </td>
       <td width="50%" valign="top">
         <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" width="100%" alt="GitHub Stats" />
         <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=cn" width="100%" alt="Top Languages" />
       </td>
 
     </tr>
+
   </table>
 
 ### 🛠️ 技术栈
