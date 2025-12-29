@@ -21,14 +21,12 @@
         <li>🎯 写出优雅、高效、可维护的代码</li>
       </ul>
     </td>
-      <td width="50%" valign="top">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" width="100%" alt="GitHub Stats" />
-        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=cn" width="100%" alt="Top Languages" />
-      </td>
-
-    </tr>
-
-  </table>
+    <td width="50%" valign="top">
+      <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" width="100%" alt="GitHub Stats" />
+      <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=cn" width="100%" alt="Top Languages" />
+    </td>
+  </tr>
+</table>
 
 ### 🛠️ 技术栈
 
