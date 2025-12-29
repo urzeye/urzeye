@@ -10,13 +10,11 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="50%" valign="top" align="left">
       <h3>👨‍💻 关于我</h3>
-      <ul>
-        <li>🔭 CRUD boy</li>
-        <li>🌱 专注于 Java、Go、Rust、JS、Python</li>
-        <li>💡 热衷于探索新技术栈和构建有趣的项目</li>
-      </ul>
+      <p>🔭 CRUD boy<br/>
+      🌱 专注于 Java、Go、Rust、JS、Python<br/>
+      💡 热衷于探索新技术栈和构建有趣的项目</p>
     </td>
     <td width="50%" valign="top">
       <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" width="100%" alt="GitHub Stats" />
@@ -28,11 +26,13 @@
 ### 🛠️ 技术栈
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-B07219?style=for-the-badge&logo=openjdk&logoColor=white"/>
   <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Rust-orange?style=for-the-badge&logo=rust&logoColor=white">
+  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Shell-9e2a22?style=for-the-badge&logo=shell&logoColor=white">
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 
 </div>
