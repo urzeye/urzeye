@@ -38,7 +38,7 @@
 </div>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,docker,nginx,linux,git,vim" />
+  <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,linux,docker,kubernetes,redis,nginx,git,vim,vscode,idea" />
 </div>
 
 ### 🐍 贡献图
