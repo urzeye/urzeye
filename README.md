@@ -3,29 +3,27 @@
 </div>
 
 <div align="center">
-  <img src="https://img.shields.io/github/followers/urzeye?label=关注者&style=social" alt="GitHub关注者" />
-  <img src="https://img.shields.io/github/stars/urzeye?label=获赞&style=social" alt="GitHub星标" />
-  <img src="https://komarev.com/ghpvc/?username=urzeye&label=访问量&color=2F80ED&style=flat" alt="访问统计" />
+  <a href="https://github.com/urzeye?tab=followers"><img src="https://img.shields.io/github/followers/urzeye?label=Followers&style=flat&color=blue" alt="GitHub关注者" /></a>
+  <a href="https://github.com/urzeye?tab=repositories"><img src="https://img.shields.io/github/stars/urzeye?label=Stars&style=flat&color=yellow" alt="GitHub星标" /></a>
+  <img src="https://komarev.com/ghpvc/?username=urzeye&label=Views&color=2F80ED&style=flat" alt="访问统计" />
 </div>
 
-<!-- 右对齐的统计卡片 -->
-<a href="https://github.com/urzeye">
-  <img align="right" width="45%" src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" alt="urzeye's github stats" />
-</a>
-<a href="https://github.com/urzeye">
-  <img align="right" width="45%" src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=cn" />
-</a>
-
-### 👨‍💻 关于我
-
-- 🔭 CRUD boy
-- 🌱 专注于 Java、Go、Rust、JS、Python
-- 💡 热衷于探索新技术栈和构建有趣的项目
-
-<br/>
-<br/>
-<br/>
-<br/>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>👨‍💻 关于我</h3>
+      <ul>
+        <li>🔭 CRUD boy</li>
+        <li>🌱 专注于 Java、Go、Rust、JS、Python</li>
+        <li>💡 热衷于探索新技术栈和构建有趣的项目</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=cn" width="100%" alt="GitHub Stats" />
+      <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=cn" width="100%" alt="Top Languages" />
+    </td>
+  </tr>
+</table>
 
 ### 🛠️ 技术栈
 
@@ -40,7 +38,7 @@
 </div>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java,go,c#,js,python,php,docker,mysql,redis,nginx,linux,git,vim,pycharm,idea,vscode,windows" />
+  <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,docker,nginx,linux,git,vim" />
 </div>
 
 ### 🐍 贡献图
@@ -50,10 +48,6 @@
 ### 📈 活动图表
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=urzeye&theme=tokyo-night&area=true&hide_border=true" width="100%"/>
-
-### ⌛ 编码时间统计
-
-<img src="https://github-readme-stats-urzeye.vercel.app/api/wakatime?username=urzeye&theme=tokyonight&hide_border=true&layout=compact&langs_count=10&range=last_30_days&locale=cn" width="100%" />
 
 ### 🤝 联系方式
 
