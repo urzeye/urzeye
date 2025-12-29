@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=2F80ED&center=true&vCenter=true&width=520&lines=Hi+there,+I'm+urzeye+👋;欢迎来到我的GitHub个人主页！" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=2F80ED&center=true&vCenter=true&width=520&lines=Hi+there%2C+I'm+urzeye+%F0%9F%91%8B;%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84GitHub%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%EF%BC%81" />
 </div>
 
 <div align="center">
