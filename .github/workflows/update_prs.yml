@@ -8,10 +8,10 @@ on:
   # 允许手动触发
   workflow_dispatch:
 
-  # push 到 master 分支时触发
+  # push 到 main 分支时触发
   push:
     branches:
-      - master
+      - main
 
 jobs:
   update-prs:
