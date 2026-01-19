@@ -46,6 +46,12 @@
   <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,linux,docker,kubernetes,redis,nginx,git,vim,vscode,idea" />
 </div>
 
+### 📬 我的开源贡献
+
+<!-- PR_START -->
+<!-- 此区域由 GitHub Actions 自动更新，请勿手动编辑 -->
+<!-- PR_END -->
+
 ### 🐍 贡献图
 
 ![贡献统计](https://raw.githubusercontent.com/urzeye/urzeye/refs/heads/output/github-contribution-grid-snake.svg)

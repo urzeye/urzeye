@@ -1,0 +1,44 @@
+name: Update PR Contributions
+
+on:
+  # 每天 UTC 8:00 (北京时间 16:00) 自动运行
+  schedule:
+    - cron: "0 8 * * *"
+
+  # 允许手动触发
+  workflow_dispatch:
+
+  # push 到 master 分支时触发
+  push:
+    branches:
+      - master
+
+jobs:
+  update-prs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Update PR contributions
+        run: python scripts/update_prs.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-update PR contributions"
+          file_pattern: "README.md"
