@@ -46,35 +46,37 @@
   <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,linux,docker,kubernetes,redis,nginx,git,vim,vscode,idea" />
 </div>
 
-### 📬 我的开源贡献
+### � 贡献图
+
+![贡献统计](https://raw.githubusercontent.com/urzeye/urzeye/refs/heads/output/github-contribution-grid-snake.svg)
+
+### �📬 我的开源贡献
 
 <!-- PR_START -->
+
 #### [Dreamy-rain/gemini-business2api](https://github.com/Dreamy-rain/gemini-business2api)
 
-| 标题 | 状态 | 创建时间 |
-|------|------|----------|
-| [fix: 修复健康检查端点返回401问题](https://github.com/Dreamy-rain/gemini-business2api/pull/32) | 🟡 待审核 | 2026-01-19 |
-| [feat: Docker 构建优化与健康检查](https://github.com/Dreamy-rain/gemini-business2api/pull/29) | ✅ 已合并 | 2026-01-19 |
+| 标题                                                                                                          | 状态      | 创建时间   |
+| ------------------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| [fix: 修复健康检查端点返回401问题](https://github.com/Dreamy-rain/gemini-business2api/pull/32)                | 🟡 待审核 | 2026-01-19 |
+| [feat: Docker 构建优化与健康检查](https://github.com/Dreamy-rain/gemini-business2api/pull/29)                 | ✅ 已合并 | 2026-01-19 |
 | [fix: 修复 Linux/Docker 环境下的浏览器自动化问题](https://github.com/Dreamy-rain/gemini-business2api/pull/27) | ✅ 已合并 | 2026-01-19 |
-| [fix: 修复账号过期时间计算时区问题](https://github.com/Dreamy-rain/gemini-business2api/pull/26) | ✅ 已合并 | 2026-01-19 |
-| [fix: 修复账号过期时间计算时区问题](https://github.com/Dreamy-rain/gemini-business2api/pull/25) | ❌ 已关闭 | 2026-01-19 |
+| [fix: 修复账号过期时间计算时区问题](https://github.com/Dreamy-rain/gemini-business2api/pull/26)               | ✅ 已合并 | 2026-01-19 |
+| [fix: 修复账号过期时间计算时区问题](https://github.com/Dreamy-rain/gemini-business2api/pull/25)               | ❌ 已关闭 | 2026-01-19 |
 
 #### [chinabugotech/hutool-site](https://github.com/chinabugotech/hutool-site)
 
-| 标题 | 状态 | 创建时间 |
-|------|------|----------|
+| 标题                                                                                                                    | 状态      | 创建时间   |
+| ----------------------------------------------------------------------------------------------------------------------- | --------- | ---------- |
 | [docs:fix(extra/模板引擎): 修复模板引擎封装文中的示例代码路径错误](https://github.com/chinabugotech/hutool-site/pull/5) | ✅ 已合并 | 2022-02-08 |
 
 #### [baomidou/generator](https://github.com/baomidou/generator)
 
-| 标题 | 状态 | 创建时间 |
-|------|------|----------|
+| 标题                                                                                                       | 状态      | 创建时间   |
+| ---------------------------------------------------------------------------------------------------------- | --------- | ---------- |
 | [feat(mybatis-plus-generator): 新增ClickHouse字段类型转换](https://github.com/baomidou/generator/pull/112) | ✅ 已合并 | 2021-09-12 |
+
 <!-- PR_END -->
-
-### 🐍 贡献图
-
-![贡献统计](https://raw.githubusercontent.com/urzeye/urzeye/refs/heads/output/github-contribution-grid-snake.svg)
 
 ### 📈 活动图表
 
