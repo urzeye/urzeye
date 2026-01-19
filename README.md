@@ -46,11 +46,11 @@
   <img src="https://skillicons.dev/icons?i=java,go,rust,js,python,linux,docker,kubernetes,redis,nginx,git,vim,vscode,idea" />
 </div>
 
-### � 贡献图
+### 🐍 贡献图
 
 ![贡献统计](https://raw.githubusercontent.com/urzeye/urzeye/refs/heads/output/github-contribution-grid-snake.svg)
 
-### �📬 我的开源贡献
+### 📬 我的开源贡献
 
 <!-- PR_START -->
 
