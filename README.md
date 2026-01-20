@@ -57,7 +57,8 @@
 
 | 标题 | 状态 | 创建时间 |
 |------|------|----------|
-| [fix: 修复健康检查端点返回401问题](https://github.com/Dreamy-rain/gemini-business2api/pull/32) | 🟡 待审核 | 2026-01-19 |
+| [feat: Docker 支持有头模式浏览器 (Xvfb)](https://github.com/Dreamy-rain/gemini-business2api/pull/37) | 🟡 待审核 | 2026-01-20 |
+| [fix: 修复健康检查端点返回401问题](https://github.com/Dreamy-rain/gemini-business2api/pull/32) | ✅ 已合并 | 2026-01-19 |
 | [feat: Docker 构建优化与健康检查](https://github.com/Dreamy-rain/gemini-business2api/pull/29) | ✅ 已合并 | 2026-01-19 |
 | [fix: 修复 Linux/Docker 环境下的浏览器自动化问题](https://github.com/Dreamy-rain/gemini-business2api/pull/27) | ✅ 已合并 | 2026-01-19 |
 | [fix: 修复账号过期时间计算时区问题](https://github.com/Dreamy-rain/gemini-business2api/pull/26) | ✅ 已合并 | 2026-01-19 |
