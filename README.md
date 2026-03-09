@@ -53,13 +53,7 @@
 ### 📬 我的开源贡献
 
 <!-- PR_START -->
-#### [Dreamy-rain/gemini-business2api](https://github.com/Dreamy-rain/gemini-business2api)
-
-| 标题 | 状态 | 创建时间 |
-|------|------|----------|
-| [feat: Docker 支持有头模式浏览器 (Xvfb)](https://github.com/Dreamy-rain/gemini-business2api/pull/37) | ✅ 已合并 | 2026-01-20 |
-| [fix: 修复健康检查端点返回401问题](https://github.com/Dreamy-rain/gemini-business2api/pull/32) | ✅ 已合并 | 2026-01-19 |
-| [feat: Docker 构建优化与健康检查](https://github.com/Dreamy-rain/gemini-business2api/pull/29) | ✅ 已合并 | 2026-01-19 |
+暂无向其他开源项目提交的 PR。
 <!-- PR_END -->
 
 ### 📈 活动图表
