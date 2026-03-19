@@ -53,10 +53,7 @@
 ### 📬 我的开源贡献
 
 <!-- PR_START -->
-#### [awesome-scripts/awesome-userscripts](https://github.com/awesome-scripts/awesome-userscripts)
-
-| 标题 | 状态 | 创建时间 |
-|------|------|----------|
+暂无向其他开源项目提交的 PR。
 <!-- PR_END -->
 
 ### 📈 活动图表
