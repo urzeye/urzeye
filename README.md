@@ -57,7 +57,6 @@
 
 | 标题 | 状态 | 创建时间 |
 |------|------|----------|
-| [docs: add Gemini Helper and Ophel Atlas scripts...](https://github.com/awesome-scripts/awesome-userscripts/pull/119) | ❌ 已关闭 | 2026-03-12 |
 <!-- PR_END -->
 
 ### 📈 活动图表

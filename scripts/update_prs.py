@@ -85,11 +85,12 @@ def fetch_prs() -> list[dict]:
 
 
 def filter_external_prs(prs: list[dict]) -> list[dict]:
-    """过滤：只保留向其他仓库提交的 PR（排除自己的仓库）"""
+    """过滤：只保留向其他仓库提交的已合并 PR（排除自己的仓库和未合并的 PR）"""
     return [
         pr
         for pr in prs
         if pr["repository"]["owner"]["login"].lower() != GITHUB_USERNAME.lower()
+        and pr["state"] == "MERGED"
     ]
 
 
