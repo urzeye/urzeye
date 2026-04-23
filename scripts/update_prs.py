@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-自动获取向其他仓库提交的 PR，并更新到 README.md 中。
+Automatically fetch PRs submitted to other repositories and update README.md.
 """
 
 import os
@@ -9,16 +9,16 @@ from datetime import datetime
 
 import requests
 
-# 配置
+# Configuration
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "urzeye")
 MAX_PRS = 20
 README_PATH = "README.md"
 
-# GraphQL API 端点
+# GraphQL API endpoint
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
-# GraphQL 查询：获取用户创建的 PR
+# GraphQL query: fetch PRs created by the user
 QUERY = """
 query($username: String!, $cursor: String) {
   user(login: $username) {
@@ -46,7 +46,7 @@ query($username: String!, $cursor: String) {
 
 
 def fetch_prs() -> list[dict]:
-    """获取用户创建的所有 PR"""
+    """Fetch all PRs created by the user."""
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Content-Type": "application/json",
@@ -72,12 +72,12 @@ def fetch_prs() -> list[dict]:
         pr_data = data["data"]["user"]["pullRequests"]
         all_prs.extend(pr_data["nodes"])
 
-        # 检查是否还有更多数据
+        # Check if there are more pages
         if not pr_data["pageInfo"]["hasNextPage"]:
             break
         cursor = pr_data["pageInfo"]["endCursor"]
 
-        # 如果已经收集足够多的 PR，提前退出
+        # Exit early if enough PRs have been collected
         if len(all_prs) >= MAX_PRS * 2:
             break
 
@@ -85,7 +85,7 @@ def fetch_prs() -> list[dict]:
 
 
 def filter_external_prs(prs: list[dict]) -> list[dict]:
-    """过滤：只保留向其他仓库提交的已合并 PR（排除自己的仓库和未合并的 PR）"""
+    """Filter: keep only merged PRs submitted to other repositories (excluding own repos and unmerged PRs)."""
     return [
         pr
         for pr in prs
@@ -95,27 +95,27 @@ def filter_external_prs(prs: list[dict]) -> list[dict]:
 
 
 def format_state(state: str) -> str:
-    """格式化 PR 状态"""
+    """Format PR state."""
     state_map = {
-        "MERGED": "✅ 已合并",
-        "OPEN": "🟡 待审核",
-        "CLOSED": "❌ 已关闭",
+        "MERGED": "✅ Merged",
+        "OPEN": "🟡 Open",
+        "CLOSED": "❌ Closed",
     }
     return state_map.get(state, state)
 
 
 def format_date(iso_date: str) -> str:
-    """格式化日期"""
+    """Format date."""
     dt = datetime.fromisoformat(iso_date.replace("Z", "+00:00"))
     return dt.strftime("%Y-%m-%d")
 
 
 def generate_markdown(prs: list[dict]) -> str:
-    """生成按仓库分组的 Markdown 内容"""
+    """Generate Markdown content grouped by repository."""
     if not prs:
-        return "暂无向其他开源项目提交的 PR。\n"
+        return "No PRs submitted to other open source projects yet.\n"
 
-    # 按仓库分组
+    # Group by repository
     repos: dict[str, list[dict]] = {}
     for pr in prs[:MAX_PRS]:
         repo_name = pr["repository"]["nameWithOwner"]
@@ -127,12 +127,12 @@ def generate_markdown(prs: list[dict]) -> str:
     for repo_name, repo_prs in repos.items():
         lines.append(f"#### [{repo_name}](https://github.com/{repo_name})")
         lines.append("")
-        lines.append("| 标题 | 状态 | 创建时间 |")
-        lines.append("|------|------|----------|")
+        lines.append("| Title | Status | Date |")
+        lines.append("|-------|--------|------|")
 
         for pr in repo_prs:
             title = pr["title"]
-            # 截断过长的标题
+            # Truncate long titles
             if len(title) > 50:
                 title = title[:47] + "..."
             url = pr["url"]
@@ -146,42 +146,42 @@ def generate_markdown(prs: list[dict]) -> str:
 
 
 def update_readme(markdown_content: str) -> bool:
-    """更新 README.md 中的 PR 区域"""
+    """Update the PR section in README.md."""
     with open(README_PATH, "r", encoding="utf-8") as f:
         readme = f.read()
 
-    # 匹配占位符区域
+    # Match the placeholder region
     pattern = r"(<!-- PR_START -->).*?(<!-- PR_END -->)"
     replacement = f"\\1\n{markdown_content}\\2"
 
     new_readme, count = re.subn(pattern, replacement, readme, flags=re.DOTALL)
 
     if count == 0:
-        print("警告：未找到 PR 占位符区域 (<!-- PR_START --> ... <!-- PR_END -->)")
+        print("Warning: PR placeholder region not found (<!-- PR_START --> ... <!-- PR_END -->)")
         return False
 
-    # 检查内容是否有变化
+    # Check if content has changed
     if new_readme == readme:
-        print("README.md 内容无变化，跳过更新。")
+        print("README.md unchanged, skipping update.")
         return False
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(new_readme)
 
-    print("README.md 已更新。")
+    print("README.md updated.")
     return True
 
 
 def main():
     if not GITHUB_TOKEN:
-        raise Exception("GITHUB_TOKEN 环境变量未设置")
+        raise Exception("GITHUB_TOKEN environment variable is not set")
 
-    print(f"正在获取 {GITHUB_USERNAME} 的 PR...")
+    print(f"Fetching PRs for {GITHUB_USERNAME}...")
     all_prs = fetch_prs()
-    print(f"共获取 {len(all_prs)} 个 PR")
+    print(f"Total PRs fetched: {len(all_prs)}")
 
     external_prs = filter_external_prs(all_prs)
-    print(f"过滤后保留 {len(external_prs)} 个外部贡献 PR")
+    print(f"External contribution PRs after filtering: {len(external_prs)}")
 
     markdown = generate_markdown(external_prs)
     update_readme(markdown)
