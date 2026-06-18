@@ -53,7 +53,11 @@
 ### 📬 My Open Source Contributions
 
 <!-- PR_START -->
-No PRs submitted to other open source projects yet.
+#### [uu201/character-arc](https://github.com/uu201/character-arc)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) | ✅ Merged | 2026-06-18 |
 <!-- PR_END -->
 
 ### 📈 Activity Graph
