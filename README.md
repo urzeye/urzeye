@@ -53,6 +53,12 @@
 ### 📬 My Open Source Contributions
 
 <!-- PR_START -->
+#### [bytedance/deer-flow](https://github.com/bytedance/deer-flow)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [fix(docs): repair broken documentation links](https://github.com/bytedance/deer-flow/pull/4330) | ✅ Merged | 2026-07-21 |
+
 #### [uu201/character-arc](https://github.com/uu201/character-arc)
 
 | Title | Status | Date |
