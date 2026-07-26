@@ -57,6 +57,7 @@
 
 | Title | Status | Date |
 |-------|--------|------|
+| [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) | ✅ Merged | 2026-07-22 |
 | [fix(docs): repair broken documentation links](https://github.com/bytedance/deer-flow/pull/4330) | ✅ Merged | 2026-07-21 |
 
 #### [uu201/character-arc](https://github.com/uu201/character-arc)
