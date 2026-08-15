@@ -53,18 +53,36 @@
 ### 📬 My Open Source Contributions
 
 <!-- PR_START -->
+#### [AdamPlatin123/awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [Add dsh outline](https://github.com/AdamPlatin123/awesome-dsh-plugins/pull/117) | ✅ Merged | 2026-08-14 |
+
+#### [Dominic789654/awesome-deepseek-harness](https://github.com/Dominic789654/awesome-deepseek-harness)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [docs: add urzeye/dsh-outline](https://github.com/Dominic789654/awesome-deepseek-harness/pull/24) | ✅ Merged | 2026-08-14 |
+
+#### [0xsline/awesome-deepseek-harness](https://github.com/0xsline/awesome-deepseek-harness)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [docs: add urzeye/dsh-outline](https://github.com/0xsline/awesome-deepseek-harness/pull/120) | ✅ Merged | 2026-08-14 |
+
+#### [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [feat: add urzeye/dsh-outline to UI Enhancements](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/208) | ✅ Merged | 2026-08-14 |
+
 #### [bytedance/deer-flow](https://github.com/bytedance/deer-flow)
 
 | Title | Status | Date |
 |-------|--------|------|
 | [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) | ✅ Merged | 2026-07-22 |
 | [fix(docs): repair broken documentation links](https://github.com/bytedance/deer-flow/pull/4330) | ✅ Merged | 2026-07-21 |
-
-#### [uu201/character-arc](https://github.com/uu201/character-arc)
-
-| Title | Status | Date |
-|-------|--------|------|
-| [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) | ✅ Merged | 2026-06-18 |
 <!-- PR_END -->
 
 ### 📈 Activity Graph
