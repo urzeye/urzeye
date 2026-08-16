@@ -53,6 +53,12 @@
 ### 📬 My Open Source Contributions
 
 <!-- PR_START -->
+#### [bruc3van/awesome-dsh-plugin](https://github.com/bruc3van/awesome-dsh-plugin)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [curate: add urzeye/dsh-outline to conversation ...](https://github.com/bruc3van/awesome-dsh-plugin/pull/23) | ✅ Merged | 2026-08-14 |
+
 #### [AdamPlatin123/awesome-dsh-plugins](https://github.com/AdamPlatin123/awesome-dsh-plugins)
 
 | Title | Status | Date |
