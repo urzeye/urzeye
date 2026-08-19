@@ -3,16 +3,16 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/urzeye?tab=followers"><img src="https://img.shields.io/github/followers/urzeye?label=Followers&style=flat&color=blue" alt="GitHub Followers" /></a>
-  <a href="https://github.com/urzeye?tab=repositories"><img src="https://img.shields.io/github/stars/urzeye?label=Stars&style=flat&color=yellow" alt="GitHub Stars" /></a>
-  <img src="https://komarev.com/ghpvc/?username=urzeye&label=Views&color=2F80ED&style=flat" alt="Profile Views" />
+  <a href="https://github.com/urzeye?tab=followers"><img src="https://img.shields.io/github/followers/urzeye?label=Followers&style=flat-square&color=2F80ED" alt="GitHub Followers" /></a>
+  <a href="https://github.com/urzeye?tab=repositories"><img src="https://img.shields.io/github/stars/urzeye?label=Stars&style=flat-square&color=F1E05A" alt="GitHub Stars" /></a>
+  <img src="https://komarev.com/ghpvc/?username=urzeye&label=Views&color=2F80ED&style=flat-square" alt="Profile Views" />
 </div>
 
 <br/>
 
 <table>
   <tr>
-    <td width="54%" valign="top" align="left">
+    <td width="53%" valign="top" align="left">
       <h3>👨‍💻 About Me</h3>
       <ul>
         <li>🚀 <b>Creator & Open Source Builder</b> — Crafting developer tools & AI-driven workflow engines.</li>
@@ -23,13 +23,13 @@
         <li>🎯 Dedicated to clean code, great developer experience, and building tools I use every day.</li>
       </ul>
     </td>
-    <td width="46%" valign="middle" align="center">
+    <td width="47%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
         <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=en" width="100%" alt="GitHub Stats" />
       </a>
       <br/>
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=en" width="100%" alt="Top Languages" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=en&langs_count=4" width="85%" alt="Top Languages" />
       </a>
     </td>
   </tr>
@@ -50,14 +50,14 @@
 ### 🌟 Notable Open Source Contributions
 
 <!-- PR_START -->
-> 📊 Contributed to **16 merged pull requests** across **11 open-source repositories**.
+> 📊 Contributed to **16 merged pull requests** across **9 open-source repositories**.
 
 | Organization / Project | Stars | Key Contribution |
 |:---|:---:|:---|
-| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 80.3k | [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
-| [**yukkcat/gemini-business2api**](https://github.com/yukkcat/gemini-business2api) | ⭐ 1.3k | [feat: Docker 支持有头模式浏览器 (Xvfb)](https://github.com/yukkcat/gemini-business2api/pull/37) *(+4 more)* |
-| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 593 | [feat(mybatis-plus-generator): 新增ClickHouse字段类型转换](https://github.com/baomidou/generator/pull/112) |
-| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 522 | [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) |
+| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 80.3k | [`fix(auth): recover from setup status timeouts`](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
+| [**yukkcat/gemini-business2api**](https://github.com/yukkcat/gemini-business2api) | ⭐ 1.3k | [`feat: Docker 支持有头模式浏览器 (Xvfb)`](https://github.com/yukkcat/gemini-business2api/pull/37) *(+4 more)* |
+| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 593 | [`feat(mybatis-plus-generator): 新增ClickHouse字段类型转换`](https://github.com/baomidou/generator/pull/112) |
+| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 522 | [`ci(release): 跨平台构建工作流与自动发布`](https://github.com/uu201/character-arc/pull/11) |
 <!-- PR_END -->
 
 ### 🤝 Contact & Connect
@@ -74,5 +74,5 @@
 <br/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=7BC092&height=100&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=2F80ED&height=90&section=footer" width="100%"/>
 </div>
