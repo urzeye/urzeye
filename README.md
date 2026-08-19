@@ -53,6 +53,12 @@
 ### 📬 My Open Source Contributions
 
 <!-- PR_START -->
+#### [Anil-matcha/awesome-dsh-plugin](https://github.com/Anil-matcha/awesome-dsh-plugin)
+
+| Title | Status | Date |
+|-------|--------|------|
+| [docs: add urzeye/dsh-outline to UI Enhancements](https://github.com/Anil-matcha/awesome-dsh-plugin/pull/29) | ✅ Merged | 2026-08-18 |
+
 #### [bruc3van/awesome-dsh-plugin](https://github.com/bruc3van/awesome-dsh-plugin)
 
 | Title | Status | Date |
