@@ -49,14 +49,14 @@
 ### 🌟 Notable Open Source Contributions
 
 <!-- PR_START -->
-> 📊 Contributed to **16 merged pull requests** across **9 open-source repositories**.
+> 📊 Contributed to **16 merged pull requests** across **11 open-source repositories**.
 
 | Organization / Project | Stars | Key Contribution |
 |:---|:---:|:---|
-| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 80.3k | [`fix(auth): recover from setup status timeouts`](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
-| [**yukkcat/gemini-business2api**](https://github.com/yukkcat/gemini-business2api) | ⭐ 1.3k | [`feat: Docker 支持有头模式浏览器 (Xvfb)`](https://github.com/yukkcat/gemini-business2api/pull/37) *(+4 more)* |
-| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 593 | [`feat(mybatis-plus-generator): 新增ClickHouse字段类型转换`](https://github.com/baomidou/generator/pull/112) |
-| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 522 | [`ci(release): 跨平台构建工作流与自动发布`](https://github.com/uu201/character-arc/pull/11) |
+| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 80.3k | [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
+| [**yukkcat/gemini-business2api**](https://github.com/yukkcat/gemini-business2api) | ⭐ 1.3k | [feat: Docker 支持有头模式浏览器 (Xvfb)](https://github.com/yukkcat/gemini-business2api/pull/37) *(+4 more)* |
+| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 593 | [feat(mybatis-plus-generator): 新增ClickHouse字段类型转换](https://github.com/baomidou/generator/pull/112) |
+| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 522 | [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) |
 <!-- PR_END -->
 
 ### 🤝 Contact & Connect
