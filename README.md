@@ -25,10 +25,11 @@
     </td>
     <td width="46%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=tokyo-night&hide_border=true" width="100%" alt="GitHub Stats" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true" width="100%" alt="GitHub Stats" />
       </a>
+      <br/>
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=tokyo-night&hide_border=true" width="100%" alt="Top Languages" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=tokyonight&hide_border=true" width="100%" alt="Top Languages" />
       </a>
     </td>
   </tr>
