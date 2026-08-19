@@ -3,9 +3,9 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/urzeye?tab=followers"><img src="https://img.shields.io/github/followers/urzeye?label=Followers&style=flat-square&color=2F80ED" alt="GitHub Followers" /></a>
-  <a href="https://github.com/urzeye?tab=repositories"><img src="https://img.shields.io/github/stars/urzeye?label=Stars&style=flat-square&color=F1E05A" alt="GitHub Stars" /></a>
-  <img src="https://komarev.com/ghpvc/?username=urzeye&label=Views&color=2F80ED&style=flat-square" alt="Profile Views" />
+  <a href="https://github.com/urzeye?tab=followers"><img src="https://img.shields.io/github/followers/urzeye?label=Followers&style=flat&color=blue" alt="GitHub Followers" /></a>
+  <a href="https://github.com/urzeye?tab=repositories"><img src="https://img.shields.io/github/stars/urzeye?label=Stars&style=flat&color=yellow" alt="GitHub Stars" /></a>
+  <img src="https://komarev.com/ghpvc/?username=urzeye&label=Views&color=2F80ED&style=flat" alt="Profile Views" />
 </div>
 
 <br/>
@@ -25,11 +25,11 @@
     </td>
     <td width="46%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true" width="100%" alt="GitHub Stats" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=en" width="100%" alt="GitHub Stats" />
       </a>
       <br/>
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=tokyonight&hide_border=true" width="100%" alt="Top Languages" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=en" width="100%" alt="Top Languages" />
       </a>
     </td>
   </tr>
@@ -74,5 +74,5 @@
 <br/>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=2F80ED&height=90&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=7BC092&height=100&section=footer" width="100%"/>
 </div>
