@@ -12,7 +12,7 @@
 
 <table>
   <tr>
-    <td width="53%" valign="top" align="left">
+    <td width="52%" valign="top" align="left">
       <h3>👨‍💻 About Me</h3>
       <ul>
         <li>🚀 <b>Creator & Open Source Builder</b> — Crafting developer tools & AI-driven workflow engines.</li>
@@ -23,13 +23,13 @@
         <li>🎯 Dedicated to clean code, great developer experience, and building tools I use every day.</li>
       </ul>
     </td>
-    <td width="47%" valign="middle" align="center">
+    <td width="48%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
         <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=en" width="100%" alt="GitHub Stats" />
       </a>
       <br/>
       <a href="https://github.com/urzeye">
-        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=en&langs_count=4" width="85%" alt="Top Languages" />
+        <img src="https://github-readme-stats-urzeye.vercel.app/api/top-langs/?username=urzeye&layout=compact&theme=radical&locale=en&langs_count=4&card_width=467" width="100%" alt="Top Languages" />
       </a>
     </td>
   </tr>
