@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Automatically fetch PRs submitted to other repositories and update README.md.
+Automatically fetch PRs submitted to other repositories via GitHub GraphQL Search API,
+filter by star thresholds and impact, sort by repository stars (high-impact first),
+and update README.md with a curated, concise list of notable open-source contributions.
 """
 
 import os
@@ -12,54 +14,63 @@ import requests
 # Configuration
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "urzeye")
-MAX_PRS = 20
 README_PATH = "README.md"
+MIN_STARS = 50          # Minimum repository stars to be considered notable
+MAX_NOTABLE_REPOS = 4   # Maximum notable repositories to showcase on profile
 
 # GraphQL API endpoint
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
-# GraphQL query: fetch PRs created by the user
-QUERY = """
-query($username: String!, $cursor: String) {
-  user(login: $username) {
-    pullRequests(first: 100, after: $cursor, orderBy: {field: CREATED_AT, direction: DESC}) {
-      nodes {
+SEARCH_QUERY = """
+query($searchQuery: String!, $cursor: String) {
+  search(query: $searchQuery, type: ISSUE, first: 100, after: $cursor) {
+    issueCount
+    nodes {
+      ... on PullRequest {
         title
         url
         state
         createdAt
+        changedFiles
         repository {
           nameWithOwner
+          stargazerCount
+          description
+          primaryLanguage {
+            name
+          }
           owner {
             login
           }
         }
       }
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
+    }
+    pageInfo {
+      hasNextPage
+      endCursor
     }
   }
 }
 """
 
 
-def fetch_prs() -> list[dict]:
-    """Fetch all PRs created by the user."""
+def fetch_external_merged_prs() -> tuple[int, list[dict]]:
+    """Fetch all merged PRs submitted to external repositories."""
     headers = {
         "Authorization": f"Bearer {GITHUB_TOKEN}",
         "Content-Type": "application/json",
     }
 
+    search_str = f"type:pr author:{GITHUB_USERNAME} -user:{GITHUB_USERNAME} is:merged"
     all_prs = []
     cursor = None
+    total_count = 0
 
     while True:
-        variables = {"username": GITHUB_USERNAME, "cursor": cursor}
+        variables = {"searchQuery": search_str, "cursor": cursor}
         response = requests.post(
             GITHUB_GRAPHQL_URL,
-            json={"query": QUERY, "variables": variables},
+            json={"query": SEARCH_QUERY, "variables": variables},
             headers=headers,
             timeout=30,
         )
@@ -69,79 +80,149 @@ def fetch_prs() -> list[dict]:
         if "errors" in data:
             raise Exception(f"GraphQL errors: {data['errors']}")
 
-        pr_data = data["data"]["user"]["pullRequests"]
-        all_prs.extend(pr_data["nodes"])
+        search_data = data["data"]["search"]
+        total_count = search_data.get("issueCount", 0)
+        nodes = search_data.get("nodes", [])
 
-        # Check if there are more pages
-        if not pr_data["pageInfo"]["hasNextPage"]:
+        for node in nodes:
+            if node and node.get("repository"):
+                if node["repository"]["owner"]["login"].lower() != GITHUB_USERNAME.lower():
+                    all_prs.append(node)
+
+        if not search_data["pageInfo"]["hasNextPage"]:
             break
-        cursor = pr_data["pageInfo"]["endCursor"]
+        cursor = search_data["pageInfo"]["endCursor"]
 
-        # Exit early if enough PRs have been collected
-        if len(all_prs) >= MAX_PRS * 2:
-            break
-
-    return all_prs
+    return total_count, all_prs
 
 
-def filter_external_prs(prs: list[dict]) -> list[dict]:
-    """Filter: keep only merged PRs submitted to other repositories (excluding own repos and unmerged PRs)."""
-    return [
-        pr
-        for pr in prs
-        if pr["repository"]["owner"]["login"].lower() != GITHUB_USERNAME.lower()
-        and pr["state"] == "MERGED"
+def is_curation_or_awesome_pr(pr: dict) -> bool:
+    """Filter out awesome-lists, bookmark curations, and trivial index submissions."""
+    repo = pr.get("repository", {})
+    repo_name = repo.get("nameWithOwner", "").lower()
+    repo_desc = (repo.get("description") or "").lower()
+    title = pr.get("title", "").strip().lower()
+    primary_lang = repo.get("primaryLanguage")
+
+    curation_repo_keywords = [
+        "awesome",
+        "curated",
+        "collection",
+        "plugin-list",
+        "awesome-plugins",
+        "resource",
+        "directory",
+        "showcase",
+        "bookmarks",
+        "site-pack",
+        "site-packs",
     ]
+    if any(kw in repo_name for kw in curation_repo_keywords):
+        return True
+
+    curation_desc_keywords = [
+        "curated list",
+        "a curated",
+        "collection of",
+        "list of awesome",
+        "awesome list",
+        "useful resources",
+    ]
+    if any(kw in repo_desc for kw in curation_desc_keywords):
+        return True
+
+    curation_title_pattern = (
+        r"^(add|curate:|docs:\s*add|feat:\s*add)\s+.*"
+        r"(\bto\b|outline|plugin|list|readme|enhancement|table|collection)"
+    )
+    if re.search(curation_title_pattern, title, re.I):
+        return True
+
+    if (primary_lang is None or primary_lang.get("name") in ["Markdown", "HTML", "Text"]) and (
+        "plugin" in repo_name or "harness" in repo_name or "list" in repo_name
+    ):
+        return True
+
+    return False
 
 
-def format_state(state: str) -> str:
-    """Format PR state."""
-    state_map = {
-        "MERGED": "✅ Merged",
-        "OPEN": "🟡 Open",
-        "CLOSED": "❌ Closed",
-    }
-    return state_map.get(state, state)
+def format_stars(star_count: int) -> str:
+    """Format star counts nicely (e.g., 80.3k, 1.3k, 593)."""
+    if star_count >= 1000:
+        return f"⭐ {star_count / 1000:.1f}k"
+    return f"⭐ {star_count}"
 
 
-def format_date(iso_date: str) -> str:
-    """Format date."""
-    dt = datetime.fromisoformat(iso_date.replace("Z", "+00:00"))
-    return dt.strftime("%Y-%m-%d")
+def generate_markdown(total_prs: int, all_external_prs: list[dict]) -> str:
+    """
+    Generate a high-impact, concise Markdown table grouped by repository
+    and sorted by repository stars (largest projects first).
+    """
+    unique_repos_count = len(
+        set(pr["repository"]["nameWithOwner"] for pr in all_external_prs if pr.get("repository"))
+    )
 
+    # 1. Group meaningful PRs by repository
+    repo_groups: dict[str, dict] = {}
+    for pr in all_external_prs:
+        if is_curation_or_awesome_pr(pr):
+            continue
 
-def generate_markdown(prs: list[dict]) -> str:
-    """Generate Markdown content grouped by repository."""
-    if not prs:
-        return "No PRs submitted to other open source projects yet.\n"
+        repo = pr.get("repository", {})
+        repo_name = repo.get("nameWithOwner")
+        if not repo_name:
+            continue
 
-    # Group by repository
-    repos: dict[str, list[dict]] = {}
-    for pr in prs[:MAX_PRS]:
-        repo_name = pr["repository"]["nameWithOwner"]
-        if repo_name not in repos:
-            repos[repo_name] = []
-        repos[repo_name].append(pr)
+        stars = repo.get("stargazerCount", 0)
+        if stars < MIN_STARS:
+            continue
+
+        if repo_name not in repo_groups:
+            repo_groups[repo_name] = {
+                "name": repo_name,
+                "stars": stars,
+                "prs": [],
+            }
+        repo_groups[repo_name]["prs"].append(pr)
+
+    # 2. Sort repositories by stars descending (Biggest projects first)
+    sorted_repos = sorted(
+        repo_groups.values(),
+        key=lambda r: r["stars"],
+        reverse=True,
+    )
 
     lines = []
-    for repo_name, repo_prs in repos.items():
-        lines.append(f"#### [{repo_name}](https://github.com/{repo_name})")
-        lines.append("")
-        lines.append("| Title | Status | Date |")
-        lines.append("|-------|--------|------|")
+    lines.append(
+        f"> 📊 Contributed to **{total_prs} merged pull requests** across **{unique_repos_count} open-source repositories**."
+    )
+    lines.append("")
 
-        for pr in repo_prs:
-            title = pr["title"]
-            # Truncate long titles
-            if len(title) > 50:
-                title = title[:47] + "..."
-            url = pr["url"]
-            state = format_state(pr["state"])
-            date = format_date(pr["createdAt"])
-            lines.append(f"| [{title}]({url}) | {state} | {date} |")
+    if not sorted_repos:
+        lines.append("No featured high-impact contributions yet.\n")
+        return "\n".join(lines)
 
-        lines.append("")
+    lines.append("| Organization / Project | Stars | Key Contribution |")
+    lines.append("|:---|:---:|:---|")
 
+    for repo_info in sorted_repos[:MAX_NOTABLE_REPOS]:
+        repo_name = repo_info["name"]
+        stars_str = format_stars(repo_info["stars"])
+        prs = repo_info["prs"]
+        latest_pr = prs[0]
+        title = latest_pr["title"].strip()
+        if len(title) > 58:
+            title = title[:55] + "..."
+        url = latest_pr["url"]
+        
+        pr_count = len(prs)
+        extra_note = f" *(+{pr_count - 1} more)*" if pr_count > 1 else ""
+
+        lines.append(
+            f"| [**{repo_name}**](https://github.com/{repo_name}) | {stars_str} | [{title}]({url}){extra_note} |"
+        )
+
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -150,7 +231,6 @@ def update_readme(markdown_content: str) -> bool:
     with open(README_PATH, "r", encoding="utf-8") as f:
         readme = f.read()
 
-    # Match the placeholder region
     pattern = r"(<!-- PR_START -->).*?(<!-- PR_END -->)"
     replacement = f"\\1\n{markdown_content}\\2"
 
@@ -160,7 +240,6 @@ def update_readme(markdown_content: str) -> bool:
         print("Warning: PR placeholder region not found (<!-- PR_START --> ... <!-- PR_END -->)")
         return False
 
-    # Check if content has changed
     if new_readme == readme:
         print("README.md unchanged, skipping update.")
         return False
@@ -168,7 +247,7 @@ def update_readme(markdown_content: str) -> bool:
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(new_readme)
 
-    print("README.md updated.")
+    print("README.md successfully updated.")
     return True
 
 
@@ -176,14 +255,11 @@ def main():
     if not GITHUB_TOKEN:
         raise Exception("GITHUB_TOKEN environment variable is not set")
 
-    print(f"Fetching PRs for {GITHUB_USERNAME}...")
-    all_prs = fetch_prs()
-    print(f"Total PRs fetched: {len(all_prs)}")
+    print(f"Fetching external PRs for {GITHUB_USERNAME} via GraphQL Search...")
+    total_count, all_prs = fetch_external_merged_prs()
+    print(f"Total external merged PRs fetched: {len(all_prs)} (search count: {total_count})")
 
-    external_prs = filter_external_prs(all_prs)
-    print(f"External contribution PRs after filtering: {len(external_prs)}")
-
-    markdown = generate_markdown(external_prs)
+    markdown = generate_markdown(total_count, all_prs)
     update_readme(markdown)
 
 
