@@ -51,10 +51,10 @@
 
 | Organization / Project | Stars | Key Contribution |
 |:---|:---:|:---|
-| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 81.1k | [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
+| [**bytedance/deer-flow**](https://github.com/bytedance/deer-flow) | ⭐ 84.3k | [fix(auth): recover from setup status timeouts](https://github.com/bytedance/deer-flow/pull/4371) *(+1 more)* |
 | [**yukkcat/gemini-business2api**](https://github.com/yukkcat/gemini-business2api) | ⭐ 1.3k | [feat: Docker 支持有头模式浏览器 (Xvfb)](https://github.com/yukkcat/gemini-business2api/pull/37) *(+4 more)* |
-| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 593 | [feat(mybatis-plus-generator): 新增ClickHouse字段类型转换](https://github.com/baomidou/generator/pull/112) |
-| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 532 | [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) |
+| [**uu201/character-arc**](https://github.com/uu201/character-arc) | ⭐ 590 | [ci(release): 跨平台构建工作流与自动发布](https://github.com/uu201/character-arc/pull/11) |
+| [**baomidou/generator**](https://github.com/baomidou/generator) | ⭐ 590 | [feat(mybatis-plus-generator): 新增ClickHouse字段类型转换](https://github.com/baomidou/generator/pull/112) |
 <!-- PR_END -->
 
 ### 🤝 Contact & Connect
