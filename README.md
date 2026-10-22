@@ -12,18 +12,15 @@
 
 <table>
   <tr>
-    <td width="52%" valign="top" align="left">
+    <td width="38%" valign="top" align="left">
       <h3>👨‍💻 About Me</h3>
       <ul>
-        <li>🚀 <b>Creator & Open Source Builder</b> — Crafting developer tools & AI-driven workflow engines.</li>
-        <li>💡 Author of <a href="https://github.com/urzeye/ophel"><b>ophel</b></a> (~1k ⭐) — Turn AI conversations into organized, reusable workflows.</li>
-        <li>🛠️ Polyglot hacker — daily driving <b>Go</b>, <b>TypeScript</b>, <b>Rust</b>, <b>Java</b>, and <b>Python</b>.</li>
-        <li>💻 Passionate about terminal ergonomics, CLI utilities, and AI-driven automation workflows.</li>
-        <li>✨ Active contributor to modern open-source ecosystems (<a href="https://github.com/bytedance/deer-flow">ByteDance</a>, etc.).</li>
-        <li>🎯 Dedicated to clean code, great developer experience, and building tools I use every day.</li>
+        <li>🔭 <b>专注构建</b>：开发工具与 AI 工作流 <i>(Developer Tools & AI)</i></li>
+        <li>⚡ <b>追求极致</b>：整洁架构与卓越 DX <i>(Clean Code & DX)</i></li>
+        <li>🎯 <b>开源探索</b>：用代码解决实际问题 <i>(Open Source Builder)</i></li>
       </ul>
     </td>
-    <td width="48%" valign="middle" align="center">
+    <td width="62%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
         <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=en" width="100%" alt="GitHub Stats" />
       </a>
