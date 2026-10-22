@@ -12,15 +12,24 @@
 
 <table>
   <tr>
-    <td width="38%" valign="top" align="left">
+    <td width="44%" valign="top" align="left">
       <h3>👨‍💻 About Me</h3>
       <ul>
-        <li>🔭 <b>专注构建</b>：开发工具与 AI 工作流 <i>(Developer Tools & AI)</i></li>
-        <li>⚡ <b>追求极致</b>：整洁架构与卓越 DX <i>(Clean Code & DX)</i></li>
-        <li>🎯 <b>开源探索</b>：用代码解决实际问题 <i>(Open Source Builder)</i></li>
+        <li>
+          🔭 <b>专注构建</b>：开发工具与 AI 自动化工作流<br/>
+          <i>Crafting developer tools & AI-driven workflows.</i>
+        </li>
+        <li>
+          ⚡ <b>追求极致</b>：崇尚整洁架构、终端体验与卓越 DX<br/>
+          <i>Dedicated to clean code, terminal ergonomics & great DX.</i>
+        </li>
+        <li>
+          🌱 <b>开源探索</b>：保持好奇心，用代码解决现实世界的问题<br/>
+          <i>Lifelong learner, building software that solves real problems.</i>
+        </li>
       </ul>
     </td>
-    <td width="62%" valign="middle" align="center">
+    <td width="56%" valign="middle" align="center">
       <a href="https://github.com/urzeye">
         <img src="https://github-readme-stats-urzeye.vercel.app/api?username=urzeye&show_icons=true&include_all_commits=true&theme=radical&locale=en" width="100%" alt="GitHub Stats" />
       </a>
